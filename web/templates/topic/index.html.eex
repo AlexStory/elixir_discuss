@@ -1,0 +1,14 @@
+<h2>Topics:</h2>
+<ul class="collection" >
+  <%= for t <- @topics do %>
+    <li class="collection-item">
+      <%= t.title %>
+    </li>
+  <% end %>
+</ul>
+
+<div class="fixed-action-button">
+  <%= link to: topic_path(@conn, :new), class: "btn btn-floating light-blue pull-right btn-large waves-effect waves-light" do %>
+    <i class="material-icons">add</i>
+  <% end %>
+</div>
