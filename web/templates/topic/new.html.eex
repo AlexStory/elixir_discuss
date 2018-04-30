@@ -1,9 +1,9 @@
-<h1>Hi</h1>
+<h1>Create a topic</h1>
 
 <%= form_for @changeset, topic_path(@conn, :create), fn f -> %>
   <div class="form-group">
     <%= text_input f, :title, placeholder: "Title", class: "form-control" %>
     <%= error_tag f, :title %>
-    <%= submit "Save Topic", class: "btn btn-primary" %>
+    <%= submit "Save Topic", class: "btn btn-primary light-blue" %>
   </div>
 <% end %>

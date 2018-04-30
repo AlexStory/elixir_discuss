@@ -1,9 +1,7 @@
 <h2>Topics:</h2>
 <ul class="collection" >
   <%= for t <- @topics do %>
-    <li class="collection-item">
-      <%= t.title %>
-    </li>
+    <%= render "topic_item.html",conn: @conn, topic: t %>
   <% end %>
 </ul>
 

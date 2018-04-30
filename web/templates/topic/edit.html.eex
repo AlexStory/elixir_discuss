@@ -1,0 +1,7 @@
+<%= form_for @changeset, topic_path(@conn, :update, @id), fn t -> %>
+    <div class="form-group">
+        <%= text_input t, :title, placeholder: "title", class: "form-control" %>
+        <%= error_tag t, :title %>
+    </div>
+    <%= submit "Submit", class: "btn btn-primary pull-right light-blue"%>
+<% end %>

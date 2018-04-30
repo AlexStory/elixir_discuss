@@ -1,0 +1,13 @@
+<li class="collection-item clearfix">
+    <%= @topic.title %> 
+    <div class="right">
+        <%= link to: topic_path(@conn, :edit, @topic), class: "btn btn-small btn-primary blue-grey" do %>
+            <span>edit</span>
+        <% end %>
+
+        <%= link to: topic_path(@conn, :delete, @topic), method: :delete do %>
+            <button class="btn btn-small red right">Delete</button>
+        <% end%>
+    </div>
+
+</li>
