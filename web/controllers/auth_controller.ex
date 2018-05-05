@@ -25,8 +25,6 @@ defmodule Discuss.AuthController do
   defp sign_in(conn, changeset) do
     case UserRepo.upsert(changeset) do
       {:ok, user} ->
-        IO.puts "+++++++++++ \n#{user.email} logged in\n+++++++++++"
-
         conn
         |> put_flash(:info, "Logged in")
         |> put_session(:user_id, user.id)
